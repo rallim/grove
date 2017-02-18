@@ -41,7 +41,7 @@ def test_vqe_run():
     fake_result.status = 0  # adding so we avoid writing to logger
     minimizer.return_value = fake_result
 
-    # not actually called in VQE run since we are overriding minmizer to just
+    # not actually called in VQE run since we are overriding minimizer to just
     # return a value. Still need this so I don't try to call the QVM server.
     fake_qvm = Mock(spec=['wavefunction'])
 

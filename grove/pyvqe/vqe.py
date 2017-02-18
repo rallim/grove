@@ -50,12 +50,12 @@ class VQE(object):
     Using this object:
 
         1) initialize with `inst = VQE(minimizer)` where `minimizer` is a
-        function that performs a gradient free minization--i.e
+        function that performs a gradient free minimization--i.e
         scipy.optimize.minimize(. , ., method='Nelder-Mead')
 
         2) call `inst.vqe_run(parametric_state_evolve, hamiltonian,
         initial_parameters)`. Returns the optimal parameters and minimum
-        expecation
+        expectation
 
     :param minimizer: function that minimizes objective f(obj, param). For
                       example the function scipy.optimize.minimize() needs
@@ -204,7 +204,7 @@ class VQE(object):
 
         :param qvm: (qvm connection)
 
-        :returns: (float) representing the expectation value of pauli_sum given
+        :returns: (float) representing the expectation value of pauli_sum
                   given the distribution generated from quil_prog.
         """
         if isinstance(pauli_sum, np.ndarray):
@@ -241,7 +241,7 @@ class VQE(object):
                 if not isinstance(samples, int):
                     raise TypeError("samples variable must be an integer")
                 if samples <= 0:
-                    raise ValueError("samples variable must be a postive integer")
+                    raise ValueError("samples variable must be a positive integer")
 
                 # normal execution via fake sampling
                 expectation = 0.0  # stores the sum of contributions to the energy from each operator term

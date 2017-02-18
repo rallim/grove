@@ -12,10 +12,10 @@ collecting bitstrings after a state preparation.
 `maxcut_qaoa.py` takes a graph defined with either NetworkX or a list of node
 pairs and implements the cost function for MAX-CUT problems.
 
-`numberpartiition_qaoa.py` takes a list of numbers and set sup a QAOA instance
+`numberpartition_qaoa.py` takes a list of numbers and set sup a QAOA instance
 for determining the equal biparitioning of the list.
 
-`graphpartion_qaoa.py` contains the `graphpart_qaoa()` method that can be used
+`graphpartition_qaoa.py` contains the `graphpart_qaoa()` method that can be used
 to construct the QAOA instance for finding the minimum cut between two equal
 sized partitions.  Like `maxcut_qaoa`, `graphpart_qaoa` accepts a NetworkX
 graph of a list of tuples defining the edges.  The method returns a QAOA instance
